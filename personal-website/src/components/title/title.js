@@ -1,12 +1,19 @@
 import React from 'react';
 import Typist from 'react-typist';
+import headshot from '../../assets/headshot.jpg'
+import "./title.css"
 
 export default function Title (props){
-    const word = `<AndrewMiller />`
+    const word = `<Andrew Miller Dev/>`
     const sentence = `Your team's missing Component`
 
 
     return (
+        <div className="titleBox"style={{display:"flex", justifyContent:"center"}}>
+            <div>
+            <img src= {headshot} alt="You dumb." style={{width:"150px", border:"solid 1px", margin:"2px"}} />
+            </div>
+      
         <div>
             <Typist
             avgTypingDelay={100}
@@ -26,6 +33,7 @@ export default function Title (props){
                    {sentence}
                 </span>
             </Typist>
+        </div>  
         </div>
     )
 }
